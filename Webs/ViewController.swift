@@ -21,6 +21,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func goButton(_ sender: AnyObject) {
+        performAction()
+    }
+    
+    @IBAction func textFieldEnter(_ sender: AnyObject) {
+        performAction()
+    }
+    
+    public func performAction() {
         let url = URL(string: address.text!)
         let request = URLRequest(url: url!)
         webDisplay.loadRequest(request as URLRequest)
