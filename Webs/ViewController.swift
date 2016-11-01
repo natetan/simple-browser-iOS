@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func goButton(_ sender: AnyObject) {
-        let url = NSURL(string: address.text!)
-        let request = NSURLRequest(url: url as! URL)
+        let url = URL(string: address.text!)
+        let request = URLRequest(url: url!)
         webDisplay.loadRequest(request as URLRequest)
     }
     @IBOutlet var address: UITextField!
