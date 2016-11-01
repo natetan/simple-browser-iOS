@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func goButton(_ sender: AnyObject) {
+        let url = NSURL(string: address.text!)
+        let request = NSURLRequest(url: url as! URL)
+        webDisplay.loadRequest(request as URLRequest)
+    }
+    @IBOutlet var address: UITextField!
 
+    @IBOutlet var webDisplay: UIWebView!
 }
 
